@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator BMI by Ezra Natanael</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Kalkulator BMI</h1>
+    <p>Perhatikan kesehatanmu! Ayo, jangan lewatkan kesempatan untuk menghitung BMI-mu sekarang. BMI atau Indeks Massa
+      Tubuh adalah ukuran yang penting untuk memahami keseimbangan tubuh kita. Dengan mengetahui BMI, kita dapat
+      menentukan apakah berat badan kita berada dalam rentang normal, berlebih, atau kekurangan. Ini memberikan gambaran
+      yang jelas tentang status kesehatan kita dan membantu dalam perencanaan gaya hidup yang sehat.</p>
+  </header>
+  <main>
+    <div class="container">
+      <form action="">
+        <div class="gender">
+          <label for="pria">Jenis Kelamin</label>
+          <div class="genders">
+            <input type="radio" name="gender" id="pria" value="pria" required class="radio">
+            <label for="pria">Pria</label>
+            <input type="radio" name="gender" id="perempuan" value="perempuan" required class="radio">
+            <label for="perempuan">Perempuan</label>
+          </div>
+        </div>
+        <div class="berat-badan">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil"
+            viewBox="0 0 16 16">
+            <path
+              d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+          </svg>
+          <label for="weight">Berat Badan (kg)</label>
+          <input type="number" name="weight" id="weight" required>
+        </div>
+        <div class="usia">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil"
+            viewBox="0 0 16 16">
+            <path
+              d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+          </svg>
+          <label for="usia">Usia (tahun)</label>
+          <input type="number" name="usia" id="usia" required>
+        </div>
+        <div class="tinggi-badan">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil"
+            viewBox="0 0 16 16">
+            <path
+              d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+          </svg>
+          <label for="height">Tinggi Badan (cm)</label>
+          <input type="number" name="height" id="height" required>
+        </div>
+        <div class="action">
+          <input type="button" value="Hitung BMI" onclick="calculateBMI()">
+          <input type="button" value="Reset" onclick="resetButton()">
+        </div>
+      </form>
+    </div>
+    <div class="features">
+      <div class="first">
+        <h2 class="features-h2">Keunggulan Fitur</h2>
+        <ol class="keunggulan">
+          <li>Menghitung Berat Badan</li>
+          <li>Menentukan kategori berat badan ideal atau tidak</li>
+          <li>Mempersiapkan program penurunan berat badan</li>
+        </ol>
+      </div>
+      <div class="second">
+        <p class="second-features">Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui
+          tidak boleh mengandalkan
+          pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan
+          orang yang memenuhi syarat seperti dokter.</p>
+      </div>
+      <div class="third">
+        <p class="third-features">Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan
+          nilai umum. Indeks Massa
+          Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda
+          (dalam meter) atau BMI = Kg/M<sup>2</sup>.</p>
+      </div>
+    </div>
+  </main>
+  <div id="result">
+    <h2 id="hasil"></h2>
+    <div id="bmi"></div>
+    <div id="category"></div>
+  </div>
+</body>
+
+</html>
